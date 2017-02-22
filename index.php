@@ -1,0 +1,217 @@
+<?php
+// Start the session
+session_start();
+// Require https
+if ($_SERVER['HTTPS'] != "on") {
+    $url = "https://". $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+    header("Location: $url");
+    exit;
+}
+?>
+<!doctype html>
+<html>
+ 
+    <head>
+        <title>Dave Squires</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="google-site-verification" content="JdIoS6j8qeBAepdCN9MsZCReixKtUbvTQfBnPXBtshs" />
+        <meta name="theme-color" content="#044576">
+        <meta name="description" content="Independent Content Creator - Hawera, NZ">
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+        <!-- Stylesheet Imports -->
+        <link rel="stylesheet" href="weather/weather.css">
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="css/elements.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+ 
+    <body>
+        <div class="section-1" id="section-1">
+            <div class="color-bar">
+                <div class="color-block animated fadeInDown" id="darkblue"></div>
+                <div class="color-block animated fadeInDown" id="lightblue"></div>
+                <div class="color-block animated fadeInDown" id="yellow"></div>
+                <div class="color-block animated fadeInDown" id="orange"></div>
+                <div class="color-block animated fadeInDown" id="red"></div>
+            </div>
+            <div class="title">
+                <!-- ADD WIGGLY ANIMATION TO 'R' -->
+                <h1 class="animated fadeInDown" id="myName">Dave Squi<a href="cv/DavidSquires-CV.pdf">r</a>es</h1>
+                <p class="animated fadeIn" id="current">Doing Something - <a href="https://www.google.co.nz/maps/place/Hawera/@-40.8256834,173.9903225,5.7z/data=!4m5!3m4!1s0x6d1575b375de93f7:0x500ef6143a2cac0!8m2!3d-39.5883348!4d174.2795389">Hawera, NZ</a></p>
+                <!--<a href="http://davesquires.me/photos">Photography</a>-->
+                <div class="social-icons animated fadeInUp">
+                    <!-- Twitter -->
+                    <a href="http://www.twitter.com/mrdavesquires">
+                        <svg class="icon" id="icon-twitter" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="56.693px" height="56.693px" viewBox="0 0 56.693 56.693" enable-background="new 0 0 56.693 56.693" xml:space="preserve">
+<path id="twitter-icon" d="M28.348,5.157c-13.6,0-24.625,11.027-24.625,24.625c0,13.6,11.025,24.623,24.625,24.623c13.6,0,24.623-11.023,24.623-24.623
+    C52.971,16.184,41.947,5.157,28.348,5.157z M40.752,24.817c0.013,0.266,0.018,0.533,0.018,0.803c0,8.201-6.242,17.656-17.656,17.656
+    c-3.504,0-6.767-1.027-9.513-2.787c0.486,0.057,0.979,0.086,1.48,0.086c2.908,0,5.584-0.992,7.707-2.656
+    c-2.715-0.051-5.006-1.846-5.796-4.311c0.378,0.074,0.767,0.111,1.167,0.111c0.566,0,1.114-0.074,1.635-0.217
+    c-2.84-0.57-4.979-3.08-4.979-6.084c0-0.027,0-0.053,0.001-0.08c0.836,0.465,1.793,0.744,2.811,0.777
+    c-1.666-1.115-2.761-3.012-2.761-5.166c0-1.137,0.306-2.204,0.84-3.12c3.061,3.754,7.634,6.225,12.792,6.483
+    c-0.106-0.453-0.161-0.928-0.161-1.414c0-3.426,2.778-6.205,6.206-6.205c1.785,0,3.397,0.754,4.529,1.959
+    c1.414-0.277,2.742-0.795,3.941-1.506c-0.465,1.45-1.448,2.666-2.73,3.433c1.257-0.15,2.453-0.484,3.565-0.977
+    C43.018,22.849,41.965,23.942,40.752,24.817z"/>
+</svg>
+                    </a>
+               
+                    <!-- Instagram -->
+                    <a href="http://www.instagram.com/mrdavesquires">
+                        <svg class="icon" id="icon-instagram" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="56.693px" height="56.693px" viewBox="0 0 56.693 56.693" enable-background="new 0 0 56.693 56.693" xml:space="preserve">
+<g>
+    <polygon id="instagram-icon" points="38.512,24.392 38.512,20.445 38.512,19.855 37.922,19.857 33.975,19.871 33.99,24.407   "/>
+    <path id="instagram-icon" d="M28.225,34.868c2.598,0,4.713-2.113,4.713-4.711c0-1.025-0.334-1.975-0.893-2.748c-0.855-1.186-2.248-1.965-3.82-1.965
+        s-2.963,0.779-3.82,1.965c-0.559,0.773-0.891,1.723-0.891,2.748C23.514,32.755,25.627,34.868,28.225,34.868z"/>
+    <path id="instagram-icon" d="M28.348,5.158c-13.6,0-24.625,11.023-24.625,24.623c0,13.6,11.025,24.625,24.625,24.625
+        c13.598,0,24.623-11.025,24.623-24.625C52.971,16.181,41.945,5.158,28.348,5.158z M41.611,27.409V38.37
+        c0,2.852-2.322,5.172-5.174,5.172H20.012c-2.853,0-5.173-2.32-5.173-5.172V27.409v-5.464c0-2.853,2.32-5.173,5.173-5.173h16.425
+        c2.852,0,5.174,2.32,5.174,5.173V27.409z"/>
+    <path id="instagram-icon" d="M35.545,30.157c0,4.035-3.283,7.32-7.32,7.32s-7.318-3.285-7.318-7.32c0-0.973,0.193-1.898,0.537-2.748h-3.996V38.37
+        c0,1.414,1.15,2.564,2.564,2.564h16.425c1.414,0,2.564-1.15,2.564-2.564V27.409h-3.998C35.35,28.259,35.545,29.185,35.545,30.157z"
+        />
+</g>
+</svg>
+                    </a>
+               
+                   <!-- LinkedIn -->
+                   <a href="https://www.linkedin.com/in/davesquires">
+                       <svg class="icon" id="icon-linkedin" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="56.693px" height="56.693px" viewBox="0 0 56.693 56.693" enable-background="new 0 0 56.693 56.693" xml:space="preserve">
+<g>
+    <path id="linkedin-icon" d="M28.347,5.155c-13.6,0-24.625,11.025-24.625,24.625c0,13.602,11.025,24.625,24.625,24.625
+        c13.598,0,24.623-11.023,24.623-24.625C52.97,16.181,41.944,5.155,28.347,5.155z M42.062,41.741c0,1.096-0.91,1.982-2.031,1.982
+        H16.613c-1.123,0-2.031-0.887-2.031-1.982V18.052c0-1.094,0.908-1.982,2.031-1.982H40.03c1.121,0,2.031,0.889,2.031,1.982V41.741z"
+        />
+    <path id="linkedin-icon" d="M33.099,26.441c-2.201,0-3.188,1.209-3.74,2.061v0.041h-0.027c0.01-0.012,0.02-0.027,0.027-0.041v-1.768h-4.15
+        c0.055,1.17,0,12.484,0,12.484h4.15v-6.973c0-0.375,0.027-0.744,0.137-1.012c0.301-0.744,0.984-1.52,2.129-1.52
+        c1.504,0,2.104,1.146,2.104,2.824v6.68h4.15V32.06C37.878,28.224,35.829,26.441,33.099,26.441z"/>
+    <path id="linkedin-icon" d="M20.864,20.712c-1.419,0-2.349,0.934-2.349,2.159c0,1.197,0.9,2.158,2.294,2.158h0.027c1.447,0,2.348-0.961,2.348-2.158
+        C23.157,21.646,22.284,20.712,20.864,20.712z"/>
+    <rect id="linkedin-icon" x="18.762" y="26.734" width="4.151" height="12.484"/>
+</g>
+</svg>
+                   </a>
+                </div>
+            </div>
+            <a href="#section-2" id="down">
+            <svg id="down" style="width:50px;height:50px" viewBox="0 0 24 24">
+            <path id="down" fill="#044576" d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+        </svg></a>   
+        </div>
+        <div class="section-2" id="section-2">
+            <a href="#section-1" id="up">
+            <svg id="up" style="width:50px;height:50px" viewBox="0 0 24 24">
+            <path id="up" fill="#ffffff" d="M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z" />
+        </svg>
+        </a>
+            <div class="about">
+                <img id="avatar" class="wow fadeInUp" src="images/profile.webp">
+                <h2 class="wow fadeInUp" id="about-title">Dave Who?</h2>
+               <!-- <p class="wow fadeInUp">17 year old Student from Hawera, NZ. I am currently learning Web Development in HTML, CSS, JavaScript. I also enjoy playing <a href="http://soundcloud/davesquires" style="color: #FFF; text-decoration: underline;">music</a> and <a href="http://davesquires.me/photos" style="color: #FFF; text-decoration: underline;">photography</a>.</p> -->
+                <p class="wow fadeInUp">Hey there, I'm Dave. I'm a student living in Hawera, New Zealand. I am a fan of design, technology, and <a href="https://davesquires.me/photos" style="color: #FFF; text-decoration: underline;">photography</a>. I'm also interested in <a href="https://soundcloud.com/davesquires" style="color: #FFF; text-decoration: underline;">music</a> and web development. I am currently learning HTML, CSS, JavaScript. If you'd like to get in touch, feel free to say hello through the button below.</p>
+                <button class="wow fadeInUp" onclick="div_show()" id="btn-hello">Say Hello</button>
+ 
+                <a target="_blank" href="cv/DavidSquires-CV.pdf"><button class="wow fadeInUp" onclick="cv/davidsquires1.pdf" id="btn-cv">View CV</button></a>
+ 
+                
+                <div id="abc">
+                <!-- Popup Div Starts Here -->
+                <div id="form-div">
+                <form action="https://formspree.io/hellodave.sq@gmail.com" class="form" id="form" method="post" name="form">
+ 
+                      <p class="name">
+                        <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Name" id="name" />
+                      </p>
+ 
+                      <p class="email">
+                        <input name="_replyto" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" />
+                      </p>
+ 
+                      <p class="text">
+                        <textarea name="text" class="validate[required,length[6,300]] feedback-input" id="msg" placeholder="Message"></textarea>
+                      </p>
+ 
+ 
+                      <div class="submit">
+                        <input type="submit" value="SEND" id="button-blue"/>
+                        <input type="button" onclick="div_hide()" value="CLOSE" id="button-red"/>
+                      </div>
+                    </form>
+                </div>
+                <!-- Popup Div Ends Here -->
+                </div>
+            </div>
+        </div>
+    </body>
+    
+    <script src="weather/jquery.simpleWeather.js"></script>
+    
+    <script src="weather/weather.js"></script>
+    
+    <script src="js/my_js.js"></script>
+    
+    <script src="js/app.js"></script>
+        
+    <!-- WOW.js -->
+        <script src="js/wow.min.js"></script>
+        <script>
+            new WOW().init();
+        </script>
+        
+    <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script>
+            $(function() {
+              $('a[href*=#]:not([href=#])').click(function() {
+                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                  var target = $(this.hash);
+                  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                  if (target.length) {
+                    $('html,body').animate({
+                      scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                  }
+                }
+              });
+            });
+            
+            jQuery(document).ready(function($){
+                $('#down').hover(
+                     function(){ $(this).addClass('animated infinite swing') },
+ 
+                     function(){ $(this).removeClass('animated infinite swing') }
+                )
+                $('#up').hover(
+                     function(){ $(this).addClass('animated infinite swing') },
+ 
+                     function(){ $(this).removeClass('animated infinite swing') }
+                )
+            });
+        </script>
+        
+    <!-- Google Analytics -->    
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+ 
+ 
+ 
+ 
+ 
+ 
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        
+          ga('create', 'UA-71219703-1', 'auto');
+          ga('send', 'pageview');
+        
+        </script>
+ 
+</html>
